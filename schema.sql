@@ -1,7 +1,5 @@
 -- SQL dump generated using DBML (dbml-lang.org)
 -- Database: PostgreSQL
--- Generated at: 2023-09-30T12:00:38.491Z
-
 CREATE TABLE "users" (
   "username" varchar PRIMARY KEY,
   "role" varchar NOT NULL DEFAULT 'depositor',
