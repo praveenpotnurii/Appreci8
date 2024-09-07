@@ -13,4 +13,7 @@ migrateup:
 migratedown:
 	migrate -path db/migration -database "postgresql://root:secret@localhost:5432/appreci8?sslmode=disable" -verbose down
 
-.PHONY: postgres createdb dropdb migrateup migratedown
+createmig:
+	migrate create -ext sql -dir db/ -seq init_schema
+
+.PHONY: postgres createdb dropdb migrateup migratedown createmig
